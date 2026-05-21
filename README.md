@@ -6,4 +6,4 @@ Siga as instruções do [slide](https://dvcirilo-ifrn.github.io/pweb/slides/aula
 
 ## Equipe
 - João Emanuel de Souza Gomes
-- Pessoa 2
+
