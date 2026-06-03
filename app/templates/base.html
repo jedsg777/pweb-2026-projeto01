@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad Wiki</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">breaking bad elenco</div>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Início</a></li>
+                <li><a href="{% url 'elenco' %}">Elenco</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>feito por joão emanuel</p>
+    </footer>
+
+</body>
+</html>

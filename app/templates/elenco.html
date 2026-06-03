@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %} {% block content %}
+<section>
+    <h1>Elenco Principal e Secundário</h1>
+    <p>Lista dos 11 integrantes chaves que deram vida à série.</p>
+    
+    <div class="grid-elenco">
+        {% for ator in integrantes %}
+        <div class="card">
+            <div style="width: 100%; height: 250px; overflow: hidden; border-radius: 4px; margin-bottom: 1rem;">
+                <img src="{% static ator.foto %}" alt="Foto de {{ ator.nome }}" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            
+            <h3>{{ ator.nome }}</h3>
+            <p><strong>Personagem:</strong> {{ ator.personagem }}</p>
+            <p><strong>Idade:</strong> {{ ator.idade }} anos</p>
+            <p><strong>Posição/Papel:</strong> {{ ator.posicao }}</p>
+            <p><strong>Local de Nasc.:</strong> {{ ator.local_nascimento }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

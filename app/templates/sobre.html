@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <h1>Sobre o Projeto</h1>
+    <div class="card" style="margin-bottom: 2rem;">
+        <h3>{{ info_site.projeto }}</h3>
+        <p>{{ info_site.descricao }}</p>
+        <p><strong>Tecnologias Utilizadas:</strong> {{ info_site.tecnologias }}</p>
+    </div>
+
+    <h2>Autor</h2>
+    <div class="grid-elenco">
+        {% for autor in autores %}
+        <div class="card">
+            <h3>{{ autor.nome }}</h3>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

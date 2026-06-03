@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %} {% block content %}
+<section>
+    <h1>{{ titulo }}</h1>
+    <p><strong>Criador:</strong> {{ criador }} | <strong>Ano de Lançamento:</strong> {{ ano_lancamento }}</p>
+    <hr style="border-color: #333;">
+    <h3>Histórico / Sinopse</h3>
+    <p style="line-height: 1.6; font-size: 1.1rem;">{{ sinopse }}</p>
+    
+    <div style="margin-top: 2rem; text-align: center;">
+        <img src="{% static 'fotos/fotofodona.webp' %}" alt="Foto Principal" style="max-width: 100%; height: auto; border-radius: 8px;">
+    </div>
+</section>
+{% endblock %}
